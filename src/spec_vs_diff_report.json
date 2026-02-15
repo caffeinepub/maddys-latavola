@@ -1,0 +1,26 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-15T04:50:17.245Z",
+  "summary": "Menu data and UI were updated to support categories, item variants, and Veg/Non-Veg markers, and a new dialog component was added to view menu screenshots. However, the diff summary does not show the actual 12 screenshot image files being added under frontend public assets with the exact uploaded filenames, which is a core part of REQ-8.",
+  "missing_requirements": [
+    {
+      "id": "REQ-8",
+      "requirement": "Add the 12 user-uploaded menu screenshots as static assets in the frontend public assets (no backend involvement) and referenced by their exact filenames.",
+      "reason": "The diff shows code that references 12 image paths in /assets/menu/... but does not show any new static image files being added under frontend public assets (e.g., frontend/public/assets/menu/...). Without the actual files present, the requirement is not fully implemented.",
+      "evidence": [
+        "frontend/src/content/menuImages.ts (references /assets/menu/*.jpg but no corresponding added public assets shown in diff summary)"
+      ]
+    }
+  ],
+  "hallucinated_features": [],
+  "confidence": 0.66,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/MenuImagesDialog.tsx",
+    "frontend/src/components/MenuSection.tsx",
+    "frontend/src/content/menu.ts",
+    "frontend/src/content/menuImages.ts",
+    "project_state.json"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Build a one-page website for the cafe Maddys Latavola (Mussoorie, Uttarakhand, India) using only the cafe’s own menu and details, including cafe photos and the provided phone numbers, with no extra changes.",
+  "architectural_notes": [
+    "Site must be a single-page layout.",
+    "Menu content must be sourced only from the cafe’s own website; do not supplement from other sources.",
+    "Do not introduce extra changes or additional content beyond provided/official cafe info.",
+    "Menu section content should reflect the user-provided menu, replacing any previously provided menu content."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-build-a-single-page-cafe-website-for-maddys-latavola-located-in-mussoorie-uttarakhand-india-and-ensure-all-visible-business-details-match-the-user-provided-info-name-location-phone-numbers-without-substituting-details-from-other-sources",
+      "title": "Build a single-page cafe website for “Maddys Latavola” located in Mussoorie, Uttarakhand, India, and ensure all visible business details match the user-provided info (name, location, phone numbers) without substituting details from other sources.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-menu-section-whose-items-prices-content-are-taken-only-from-maddys-latavola-s-own-official-menu-as-provided-on-the-cafe-s-website-no-third-party-menu-sources-and-no-invented-items",
+      "title": "Add a Menu section whose items/prices/content are taken only from Maddys Latavola’s own official menu as provided on the cafe’s website (no third-party menu sources and no invented items).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-photos-gallery-section-that-uses-only-photos-of-maddys-latavola-sourced-from-the-provided-google-maps-link-or-other-official-cafe-controlled-sources-and-do-not-add-stock-images-or-unrelated-cafe-imagery",
+      "title": "Add a Photos/Gallery section that uses only photos of Maddys Latavola sourced from the provided Google Maps link, or other official cafe-controlled sources, and do not add stock images or unrelated cafe imagery.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-contact-section-that-prominently-displays-both-phone-numbers-and-provides-click-to-call-links",
+      "title": "Add a Contact section that prominently displays both phone numbers and provides click-to-call links.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-coherent-distinctive-visual-theme-colors-typography-spacing-and-section-layout-appropriate-for-a-cafe-one-page-site-and-use-it-consistently-across-the-page-avoid-a-blue-purple-dominant-palette",
+      "title": "Apply a coherent, distinctive visual theme (colors, typography, spacing, and section layout) appropriate for a cafe one-page site, and use it consistently across the page (avoid a blue/purple-dominant palette).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-menu-section-data-source-with-menu-items-categories-variants-and-prices-taken-strictly-from-the-12-user-uploaded-menu-screenshots-the-screenshots-are-the-single-source-of-truth-for-menu-content-remove-all-currently-hardcoded-invented-menu-content-in-frontend-src-content-menu-ts",
+      "title": "Replace the current Menu section data source with menu items, categories, variants, and prices taken strictly from the 12 user-uploaded menu screenshots (the screenshots are the single source of truth for menu content). Remove all currently hardcoded/invented menu content in frontend/src/content/menu.ts.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-menu-section-ui-frontend-src-components-menusection-tsx-to-correctly-render-the-new-menu-structure-from-the-screenshots-including-support-for-multi-price-variants-e-g-half-full-and-medium-large-and-veg-non-veg-indicators-while-keeping-the-existing-accordion-based-layout",
+      "title": "Update the Menu section UI (frontend/src/components/MenuSection.tsx) to correctly render the new menu structure from the screenshots, including support for multi-price variants (e.g., Half/Full and Medium/Large) and Veg/Non-Veg indicators, while keeping the existing accordion-based layout.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-12-user-uploaded-menu-screenshots-as-static-assets-in-the-frontend-and-provide-an-optional-in-page-way-for-users-to-view-the-original-menu-images-e-g-a-view-menu-images-button-that-opens-a-modal-gallery-use-the-exact-uploaded-filenames",
+      "title": "Add the 12 user-uploaded menu screenshots as static assets in the frontend and provide an optional in-page way for users to view the original menu images (e.g., a \"View menu images\" button that opens a modal/gallery). Use the exact uploaded filenames.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a one-page cafe website for Maddys Latavola (Mussoorie, Uttarakhand, India) including cafe photos, phone numbers (9997818704, 9756327900), and the menu sourced only from the cafe’s own website (no additional changes/content).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Replace the currently provided Menu section content with the menu the user wants to use instead (use the user-provided menu as the source of truth).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Maddys Latavola",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

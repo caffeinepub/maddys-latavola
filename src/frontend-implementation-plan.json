@@ -1,0 +1,127 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Update Menu content and UI to match uploaded menu screenshots",
+  "requirements": [
+    {
+      "id": "REQ-6",
+      "summary": "Replace hardcoded menu content with a transcription-based menu model sourced strictly from the 12 uploaded screenshots, including variant pricing and Veg/Non-Veg indicators.",
+      "acceptanceCriteria": [
+        "frontend/src/content/menu.ts no longer contains the existing placeholder categories like \"Italian Specialties\", \"Sandwiches & Salads\", or invented items/descriptions.",
+        "All menu categories/items/prices shown on the website are transcribed from (and match) the user-uploaded screenshots, with no additional items, no modified names, and no inferred prices.",
+        "Where the screenshots show variant pricing (e.g., Half/Full; Medium/Large with inch sizes), the data model captures those variants so the UI can render them clearly.",
+        "Where the screenshots indicate Veg/Non-Veg, the data model captures that indicator (e.g., a tag/flag) so the UI can display it in text/icon form."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/content/menu.ts",
+          "operation": "modify",
+          "description": "Replace the existing placeholder menuData with a new menu structure transcribed strictly from the 12 uploaded screenshots; update types to support (a) items with a single price or a set of labeled variant prices (e.g., Half/Full, Medium/Large with inch sizes) and (b) Veg/Non-Veg markers as explicit fields usable by the UI. Ensure no invented categories/items/descriptions/prices remain."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Update MenuSection to render the new screenshot-derived menu structure in the existing accordion layout, including variant pricing and Veg/Non-Veg indicators, and replace Italian-only marketing copy with generic menu text.",
+      "acceptanceCriteria": [
+        "MenuSection renders each category from the new menu data and displays items with either a single price or a clear variant price layout when multiple prices apply.",
+        "MenuSection no longer displays Italian-only marketing copy; update the section description text to a generic menu description that matches the broader menu shown in the screenshots.",
+        "Veg/Non-Veg markers are displayed consistently for items where the screenshots indicate them.",
+        "The Menu section remains functional and responsive (accordion expands/collapses; layout does not overflow on mobile)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/MenuSection.tsx",
+          "operation": "modify",
+          "description": "Refactor rendering to match the updated menu data model from frontend/src/content/menu.ts while keeping the current Accordion-based layout; add UI for (1) single-price items and (2) multi-variant price display with clear labels/columns, and render Veg/Non-Veg markers consistently (text/icon). Replace the Italian-focused description with a generic English menu description. If using any shadcn-ui components (e.g., dialog/badge/separator), compose existing components without editing frontend/src/components/ui/* and verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Add the 12 uploaded menu screenshots as static public assets and provide an optional in-page viewer (modal/gallery) to view the original images from within the Menu section.",
+      "acceptanceCriteria": [
+        "All 12 screenshots are available as static files under the frontend public assets (no backend involvement) and referenced by their exact filenames.",
+        "MenuSection includes an optional UI control that allows viewing the original screenshots in a readable way (modal/lightbox or dedicated gallery area).",
+        "No stock images are introduced and no menu images are fetched from third-party sources."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/menu/Screenshot_2025-03-01-20-26-20-56_e2d5b3f32b79de1d45acd1fad96fbb0f.jpg",
+          "operation": "create",
+          "description": "Add the uploaded menu screenshot as a static asset with the exact filename."
+        },
+        {
+          "path": "frontend/public/assets/menu/Screenshot_2025-03-01-20-26-20-56_e2d5b3f32b79de1d45acd1fad96fbb0f-1.jpg",
+          "operation": "create",
+          "description": "Add the uploaded menu screenshot as a static asset with the exact filename."
+        },
+        {
+          "path": "frontend/public/assets/menu/Screenshot_2025-03-01-20-27-06-42_e2d5b3f32b79de1d45acd1fad96fbb0f.jpg",
+          "operation": "create",
+          "description": "Add the uploaded menu screenshot as a static asset with the exact filename."
+        },
+        {
+          "path": "frontend/public/assets/menu/Screenshot_2025-03-01-20-27-06-42_e2d5b3f32b79de1d45acd1fad96fbb0f-1.jpg",
+          "operation": "create",
+          "description": "Add the uploaded menu screenshot as a static asset with the exact filename."
+        },
+        {
+          "path": "frontend/public/assets/menu/Screenshot_2025-03-01-20-27-36-54_e2d5b3f32b79de1d45acd1fad96fbb0f.jpg",
+          "operation": "create",
+          "description": "Add the uploaded menu screenshot as a static asset with the exact filename."
+        },
+        {
+          "path": "frontend/public/assets/menu/Screenshot_2025-03-01-20-27-36-54_e2d5b3f32b79de1d45acd1fad96fbb0f-1.jpg",
+          "operation": "create",
+          "description": "Add the uploaded menu screenshot as a static asset with the exact filename."
+        },
+        {
+          "path": "frontend/public/assets/menu/Screenshot_2025-03-01-20-27-51-20_e2d5b3f32b79de1d45acd1fad96fbb0f.jpg",
+          "operation": "create",
+          "description": "Add the uploaded menu screenshot as a static asset with the exact filename."
+        },
+        {
+          "path": "frontend/public/assets/menu/Screenshot_2025-03-01-20-27-51-20_e2d5b3f32b79de1d45acd1fad96fbb0f-1.jpg",
+          "operation": "create",
+          "description": "Add the uploaded menu screenshot as a static asset with the exact filename."
+        },
+        {
+          "path": "frontend/public/assets/menu/Screenshot_2025-03-01-20-28-08-41_e2d5b3f32b79de1d45acd1fad96fbb0f.jpg",
+          "operation": "create",
+          "description": "Add the uploaded menu screenshot as a static asset with the exact filename."
+        },
+        {
+          "path": "frontend/public/assets/menu/Screenshot_2025-03-01-20-28-08-41_e2d5b3f32b79de1d45acd1fad96fbb0f-1.jpg",
+          "operation": "create",
+          "description": "Add the uploaded menu screenshot as a static asset with the exact filename."
+        },
+        {
+          "path": "frontend/public/assets/menu/Screenshot_2025-03-01-20-28-33-32_e2d5b3f32b79de1d45acd1fad96fbb0f.jpg",
+          "operation": "create",
+          "description": "Add the uploaded menu screenshot as a static asset with the exact filename."
+        },
+        {
+          "path": "frontend/public/assets/menu/Screenshot_2025-03-01-20-28-33-32_e2d5b3f32b79de1d45acd1fad96fbb0f-1.jpg",
+          "operation": "create",
+          "description": "Add the uploaded menu screenshot as a static asset with the exact filename."
+        },
+        {
+          "path": "frontend/src/content/menuImages.ts",
+          "operation": "create",
+          "description": "Create a single source of truth list of the 12 menu screenshot asset paths (referencing frontend/public/assets/menu/*) and English alt text so MenuSection can present a predictable image gallery without fetching from third parties."
+        },
+        {
+          "path": "frontend/src/components/MenuImagesDialog.tsx",
+          "operation": "create",
+          "description": "Create a reusable Menu images viewer component (modal/lightbox) that can display the 12 static screenshot assets in a readable way (scrollable list or simple gallery with selection). Use existing shadcn-ui Dialog components to provide accessible modal behavior; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/MenuSection.tsx",
+          "operation": "modify",
+          "description": "Add an optional in-page control (e.g., a button/link) within the Menu section that opens the menu screenshots viewer using MenuImagesDialog and the list from frontend/src/content/menuImages.ts. Use existing shadcn-ui Button/Dialog composition as needed without editing frontend/src/components/ui/*; verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

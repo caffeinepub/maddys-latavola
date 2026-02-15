@@ -1,0 +1,18 @@
+{
+  "frontend/src/index.css": "Global styles with warm cafe-themed OKLCH color palette (espresso, cream, terracotta tones) and custom fonts (Playfair Display for headings, Inter for body text).",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with warm cafe color tokens, custom shadows, animations, and serif/sans font families.",
+  "frontend/src/content/menu.ts": "Complete menu data structure transcribed from uploaded screenshots with support for variant pricing (Half/Full, Medium/Large), Veg/Non-Veg indicators, and all categories including Breakfast, Italian, Chinese, Indian Connect, and Beverages.",
+  "frontend/src/content/gallery.ts": "Gallery image manifest with paths and metadata for cafe photos (exterior, interior, food, ambiance).",
+  "frontend/src/components/Section.tsx": "Reusable section wrapper component providing consistent padding, max-width, and optional muted background for page sections.",
+  "frontend/src/components/SiteHeader.tsx": "Sticky header with brand name, smooth-scroll navigation to page sections, mobile menu toggle, and scroll-based styling.",
+  "frontend/src/components/SiteFooter.tsx": "Footer displaying cafe location, contact numbers, copyright, and Caffeine.ai attribution with UTM tracking.",
+  "frontend/src/components/HeroSection.tsx": "Hero section with cafe name, tagline, location, CTA buttons, and feature highlights in a warm gradient background.",
+  "frontend/src/components/MenuSection.tsx": "Updated menu section component that renders the new menu structure with accordion layout, displays variant pricing clearly, shows Veg/Non-Veg badges, and includes a button to open the menu images viewer.",
+  "frontend/src/components/GallerySection.tsx": "Responsive gallery grid with hover effects and Dialog-based image preview for cafe photos.",
+  "frontend/src/components/ContactSection.tsx": "Contact section with location card, clickable phone number buttons, and opening hours information.",
+  "frontend/src/App.tsx": "Main application component composing all sections (Hero, Menu, Gallery, Contact) with header and footer in a single-page layout.",
+  "frontend/index.html": "HTML entry point with proper meta tags for Maddys Latavola cafe including title, description, and keywords.",
+  "frontend/src/hooks/useQueries.ts": "Minimal queries file as no backend data fetching is required for this static content site.",
+  "frontend/src/content/menuImages.ts": "List of 12 menu screenshot asset paths with descriptive alt text for the menu images gallery viewer.",
+  "frontend/src/components/MenuImagesDialog.tsx": "Reusable dialog component that displays the 12 original menu screenshots in a scrollable grid with click-to-enlarge functionality using shadcn Dialog and ScrollArea components."
+}

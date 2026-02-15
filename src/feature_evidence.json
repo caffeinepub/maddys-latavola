@@ -1,0 +1,61 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-replace-the-current-menu-section-data-source-with-menu-items-categories-variants-and-prices-taken-strictly-from-the-12-user-uploaded-menu-screenshots-the-screenshots-are-the-single-source-of-truth-for-menu-content-remove-all-currently-hardcoded-invented-menu-content-in-frontend-src-content-menu-ts",
+      "featureTitle": "Replace the current Menu section data source with menu items, categories, variants, and prices taken strictly from the 12 user-uploaded menu screenshots (the screenshots are the single source of truth for menu content). Remove all currently hardcoded/invented menu content in frontend/src/content/menu.ts.",
+      "files": [
+        "frontend/src/content/menu.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-menu-section-ui-frontend-src-components-menusection-tsx-to-correctly-render-the-new-menu-structure-from-the-screenshots-including-support-for-multi-price-variants-e-g-half-full-and-medium-large-and-veg-non-veg-indicators-while-keeping-the-existing-accordion-based-layout",
+      "featureTitle": "Update the Menu section UI (frontend/src/components/MenuSection.tsx) to correctly render the new menu structure from the screenshots, including support for multi-price variants (e.g., Half/Full and Medium/Large) and Veg/Non-Veg indicators, while keeping the existing accordion-based layout.",
+      "files": [
+        "frontend/src/components/MenuSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-12-user-uploaded-menu-screenshots-as-static-assets-in-the-frontend-and-provide-an-optional-in-page-way-for-users-to-view-the-original-menu-images-e-g-a-view-menu-images-button-that-opens-a-modal-gallery-use-the-exact-uploaded-filenames",
+      "featureTitle": "Add the 12 user-uploaded menu screenshots as static assets in the frontend and provide an optional in-page way for users to view the original menu images (e.g., a \"View menu images\" button that opens a modal/gallery). Use the exact uploaded filenames.",
+      "files": [
+        "frontend/src/components/MenuImagesDialog.tsx",
+        "frontend/src/components/MenuSection.tsx",
+        "frontend/src/content/menuImages.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
